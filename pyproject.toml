@@ -101,6 +101,14 @@ module = "authentication_sdk.tests.*"
 ignore_missing_imports = true
 check_untyped_defs = true
 
+[tool.coverage.run]
+parallel = true
+source = [
+    "tests",
+    "authentication_sdk"
+]
+context = '${CONTEXT}'
+
 [tool.coverage.report]
 precision = 2
 exclude_lines = [
